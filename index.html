@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Velvet | Premium Pakistani Clothing Brand</title>
+  <meta name="description" content="Velvet brings you handcrafted luxury clothing — from premium lawn to formal formals. Shop the latest collection." />
+
+  <link rel="canonical" href="https://velvet-demo.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Velvet | Premium Pakistani Clothing Brand" />
+  <meta property="og:description" content="Velvet brings you handcrafted luxury clothing — from premium lawn to formal formals. Shop the latest collection." />
+  <meta property="og:url" content="https://velvet-demo.vercel.app/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Velvet | Premium Pakistani Clothing Brand" />
+  <meta name="twitter:description" content="Velvet brings you handcrafted luxury clothing — from premium lawn to formal formals. Shop the latest collection." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="velvet-header">
+    <div class="velvet-header__top">
+      <div class="velvet-header__left">
+        <button type="button" class="velvet-icon-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="20" y1="20" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+
+      <a href="index.html" class="velvet-logo" aria-label="Velvet — Home">VELVET</a>
+
+      <div class="velvet-header__right">
+        <button type="button" class="velvet-icon-btn" aria-label="Wishlist">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </button>
+        <button type="button" class="velvet-icon-btn" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="velvet-cart-badge" data-cart-count>0</span>
+        </button>
+        <button type="button" class="velvet-icon-btn velvet-hamburger" aria-label="Open menu" aria-expanded="false" data-menu-open>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="velvet-nav" aria-label="Primary">
+      <a href="shop.html" class="velvet-nav__link">New Arrivals</a>
+      <a href="shop.html" class="velvet-nav__link">Lawn</a>
+      <a href="shop.html" class="velvet-nav__link">Formals</a>
+      <a href="shop.html" class="velvet-nav__link">Casuals</a>
+      <a href="shop.html" class="velvet-nav__link velvet-nav__link--sale">Sale</a>
+      <a href="about.html" class="velvet-nav__link">About</a>
+    </nav>
+
+    <div class="velvet-mobile-menu" data-mobile-menu aria-hidden="true">
+      <div class="velvet-mobile-menu__header">
+        <span class="velvet-logo">VELVET</span>
+        <button type="button" class="velvet-mobile-menu__close" aria-label="Close menu" data-menu-close>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+        </button>
+      </div>
+      <ul class="velvet-mobile-menu__list">
+        <li><a href="shop.html" class="velvet-mobile-menu__link">New Arrivals</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link">Lawn</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link">Formals</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link">Casuals</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link velvet-mobile-menu__link--sale">Sale</a></li>
+        <li><a href="about.html" class="velvet-mobile-menu__link">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="hero" class="velvet-hero">
+      <div class="velvet-hero__overlay"></div>
+      <div class="velvet-hero__content">
+        <span class="velvet-hero__label">NEW COLLECTION 2026</span>
+        <h1 class="velvet-hero__heading">Elegance in Every Thread</h1>
+        <p class="velvet-hero__subtext">Handcrafted luxury for the modern woman</p>
+        <div class="velvet-hero__actions">
+          <a href="shop.html" class="velvet-btn velvet-btn--primary">Shop New Arrivals</a>
+          <a href="shop.html" class="velvet-btn velvet-btn--outline">Explore Collections</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="velvet-marquee" aria-hidden="true">
+      <div class="velvet-marquee__track">
+        <span class="velvet-marquee__item">FREE SHIPPING ON ORDERS ABOVE PKR 3,000 &nbsp;·&nbsp; NEW LAWN COLLECTION NOW LIVE &nbsp;·&nbsp; PREMIUM QUALITY FABRICS &nbsp;·&nbsp; CASH ON DELIVERY AVAILABLE &nbsp;·&nbsp;</span>
+        <span class="velvet-marquee__item">FREE SHIPPING ON ORDERS ABOVE PKR 3,000 &nbsp;·&nbsp; NEW LAWN COLLECTION NOW LIVE &nbsp;·&nbsp; PREMIUM QUALITY FABRICS &nbsp;·&nbsp; CASH ON DELIVERY AVAILABLE &nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+    <section id="featured-collection" class="velvet-collections">
+      <div class="velvet-section__head">
+        <span class="velvet-section__label">SHOP BY CATEGORY</span>
+        <h2 class="velvet-section__heading">Our Collections</h2>
+      </div>
+
+      <div class="velvet-collections__grid">
+        <a href="shop.html" class="velvet-collection-card">
+          <div class="velvet-collection-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=600&q=80" alt="Lawn Collection" class="velvet-collection-card__image" loading="lazy" />
+            <div class="velvet-collection-card__overlay">
+              <span class="velvet-collection-card__overlay-name">Lawn Collection</span>
+              <span class="velvet-collection-card__overlay-cta">Shop Now &rarr;</span>
+            </div>
+          </div>
+          <h3 class="velvet-collection-card__title">Lawn Collection</h3>
+        </a>
+
+        <a href="shop.html" class="velvet-collection-card">
+          <div class="velvet-collection-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Formal Wear" class="velvet-collection-card__image" loading="lazy" />
+            <div class="velvet-collection-card__overlay">
+              <span class="velvet-collection-card__overlay-name">Formal Wear</span>
+              <span class="velvet-collection-card__overlay-cta">Shop Now &rarr;</span>
+            </div>
+          </div>
+          <h3 class="velvet-collection-card__title">Formal Wear</h3>
+        </a>
+
+        <a href="shop.html" class="velvet-collection-card">
+          <div class="velvet-collection-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80" alt="Casual Wear" class="velvet-collection-card__image" loading="lazy" />
+            <div class="velvet-collection-card__overlay">
+              <span class="velvet-collection-card__overlay-name">Casual Wear</span>
+              <span class="velvet-collection-card__overlay-cta">Shop Now &rarr;</span>
+            </div>
+          </div>
+          <h3 class="velvet-collection-card__title">Casual Wear</h3>
+        </a>
+
+        <a href="shop.html" class="velvet-collection-card">
+          <div class="velvet-collection-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Sale — Up to 50% Off" class="velvet-collection-card__image" loading="lazy" />
+            <div class="velvet-collection-card__overlay">
+              <span class="velvet-collection-card__overlay-name">Sale — Up to 50% Off</span>
+              <span class="velvet-collection-card__overlay-cta">Shop Now &rarr;</span>
+            </div>
+          </div>
+          <h3 class="velvet-collection-card__title">Sale — Up to 50% Off</h3>
+        </a>
+      </div>
+    </section>
+
+    <section id="new-arrivals" class="velvet-arrivals">
+      <div class="velvet-section__head">
+        <span class="velvet-section__label">JUST LANDED</span>
+        <h2 class="velvet-section__heading">New Arrivals</h2>
+      </div>
+
+      <div class="velvet-filter-tabs" role="tablist" aria-label="Filter products">
+        <button type="button" class="velvet-filter-tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="velvet-filter-tab" data-filter="lawn" role="tab" aria-selected="false">Lawn</button>
+        <button type="button" class="velvet-filter-tab" data-filter="formals" role="tab" aria-selected="false">Formals</button>
+        <button type="button" class="velvet-filter-tab" data-filter="casuals" role="tab" aria-selected="false">Casuals</button>
+        <button type="button" class="velvet-filter-tab" data-filter="under-3000" role="tab" aria-selected="false">Under PKR 3,000</button>
+      </div>
+
+      <div class="velvet-product-grid" data-product-grid>
+        <article class="velvet-product-card" data-category="lawn" data-price="4500">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1614251056216-f748f76cd228?auto=format&fit=crop&w=600&q=80" alt="Embroidered Lawn Suit" class="velvet-product-card__image" loading="lazy" />
+              <div class="velvet-product-card__badges">
+                <span class="velvet-badge velvet-badge--new">NEW</span>
+              </div>
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Lawn · In Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Embroidered Lawn Suit</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 4,500</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="velvet-product-card" data-category="formals" data-price="8200">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?auto=format&fit=crop&w=600&q=80" alt="Formal Chiffon Dupatta Set" class="velvet-product-card__image" loading="lazy" />
+              <div class="velvet-product-card__badges">
+                <span class="velvet-badge velvet-badge--new">NEW</span>
+              </div>
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Formals · In Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Formal Chiffon Dupatta Set</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 8,200</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="velvet-product-card" data-category="casuals" data-price="2800">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?auto=format&fit=crop&w=600&q=80" alt="Digital Print Casual Kurti" class="velvet-product-card__image" loading="lazy" />
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Casuals · In Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Digital Print Casual Kurti</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 2,800</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="velvet-product-card" data-category="formals" data-price="6500">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80" alt="Luxury Karandi Shawl" class="velvet-product-card__image" loading="lazy" />
+              <div class="velvet-product-card__badges">
+                <span class="velvet-badge velvet-badge--low">LOW STOCK</span>
+              </div>
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Formals · Low Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Luxury Karandi Shawl</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 6,500</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="velvet-product-card" data-category="lawn" data-price="3800">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=600&q=80" alt="Summer Lawn 3-Piece" class="velvet-product-card__image" loading="lazy" />
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Lawn · In Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Summer Lawn 3-Piece</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 3,800</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="velvet-product-card" data-category="formals" data-price="9600">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" alt="Embellished Formal Gown" class="velvet-product-card__image" loading="lazy" />
+              <div class="velvet-product-card__badges">
+                <span class="velvet-badge velvet-badge--sale">SALE -20%</span>
+              </div>
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Formals · In Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Embellished Formal Gown</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 9,600</span>
+              <span class="velvet-product-card__price--original">PKR 12,000</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="velvet-product-card" data-category="casuals" data-price="1800">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Printed Cotton Kurti" class="velvet-product-card__image" loading="lazy" />
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Casuals · In Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Printed Cotton Kurti</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 1,800</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="velvet-product-card" data-category="formals" data-price="9500">
+          <a href="product-detail.html" class="velvet-product-card__link">
+            <div class="velvet-product-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Silk Formal Dupatta Set" class="velvet-product-card__image" loading="lazy" />
+              <button type="button" class="velvet-wishlist-btn" aria-label="Add to wishlist" data-wishlist>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button type="button" class="velvet-quickview-btn">Quick View</button>
+              <button type="button" class="velvet-addcart-btn">Add to Cart</button>
+            </div>
+          </a>
+          <div class="velvet-product-card__body">
+            <span class="velvet-product-card__category">Formals · In Stock</span>
+            <h3 class="velvet-product-card__name"><a href="product-detail.html">Silk Formal Dupatta Set</a></h3>
+            <div class="velvet-product-card__pricing">
+              <span class="velvet-product-card__price">PKR 9,500</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="brand-story" class="velvet-story">
+      <div class="velvet-story__text">
+        <span class="velvet-section__label">OUR STORY</span>
+        <h2 class="velvet-story__heading">Crafted with love, worn with pride</h2>
+        <p class="velvet-story__paragraph">
+          Velvet was born in the heart of Lahore in 2018, founded on a simple belief — every Pakistani woman deserves clothing made with intention. From handpicked lawns to hand-finished embroidery, every piece passes through the careful hands of artisans who treat fabric as art.
+        </p>
+        <p class="velvet-story__paragraph">
+          We work with women weavers, dyers, and embroiderers across Punjab, paying fair wages and preserving craft techniques that took generations to perfect. When you wear Velvet, you wear the work of a community — and you help us empower it further.
+        </p>
+        <a href="about.html" class="velvet-btn velvet-btn--gold-outline">Read Our Story</a>
+      </div>
+      <div class="velvet-story__image-wrap">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Velvet artisans at work" class="velvet-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="bestsellers" class="velvet-reviews">
+      <div class="velvet-section__head">
+        <span class="velvet-section__label">REVIEWS</span>
+        <h2 class="velvet-section__heading">What Our Customers Say</h2>
+      </div>
+
+      <div class="velvet-reviews__grid">
+        <article class="velvet-review-card">
+          <div class="velvet-review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="velvet-review-card__quote">
+            &ldquo;The fabric quality is unmatched. I&rsquo;ve ordered 3 times and every piece has been perfect. The embroidery on the lawn suit is stunning.&rdquo;
+          </p>
+          <div class="velvet-review-card__meta">
+            <span class="velvet-review-card__name">Ayesha Malik</span>
+            <span class="velvet-review-card__city">Lahore</span>
+          </div>
+        </article>
+
+        <article class="velvet-review-card">
+          <div class="velvet-review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="velvet-review-card__quote">
+            &ldquo;Finally a Pakistani brand that delivers on its promise. Fast shipping, beautiful packaging, and the dress fits perfectly.&rdquo;
+          </p>
+          <div class="velvet-review-card__meta">
+            <span class="velvet-review-card__name">Sana Raza</span>
+            <span class="velvet-review-card__city">Islamabad</span>
+          </div>
+        </article>
+
+        <article class="velvet-review-card">
+          <div class="velvet-review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="velvet-review-card__quote">
+            &ldquo;Ordered the formal dupatta set for my sister&rsquo;s wedding. Everyone asked where it was from. Absolutely gorgeous quality.&rdquo;
+          </p>
+          <div class="velvet-review-card__meta">
+            <span class="velvet-review-card__name">Hina Tariq</span>
+            <span class="velvet-review-card__city">Karachi</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="newsletter" class="velvet-newsletter">
+      <div class="velvet-newsletter__inner">
+        <h2 class="velvet-newsletter__heading">Join the Velvet Family</h2>
+        <p class="velvet-newsletter__subtext">
+          Subscribe for early access to new collections, exclusive offers, and style inspiration.
+        </p>
+
+        <form class="velvet-newsletter__form" data-newsletter-form novalidate>
+          <label for="velvet-newsletter-email" class="velvet-visually-hidden">Email address</label>
+          <input
+            type="email"
+            id="velvet-newsletter-email"
+            name="email"
+            class="velvet-newsletter__input"
+            placeholder="Enter your email address"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="velvet-newsletter__submit">Subscribe</button>
+        </form>
+
+        <p class="velvet-newsletter__success" data-newsletter-success hidden>
+          Welcome to Velvet! Check your inbox for a surprise.
+        </p>
+
+        <p class="velvet-newsletter__privacy">We respect your privacy. No spam, ever.</p>
+
+        <ul class="velvet-newsletter__perks">
+          <li class="velvet-newsletter__perk"><span class="velvet-newsletter__perk-icon" aria-hidden="true">🚚</span> Free Shipping</li>
+          <li class="velvet-newsletter__perk"><span class="velvet-newsletter__perk-icon" aria-hidden="true">💳</span> Secure Payment</li>
+          <li class="velvet-newsletter__perk"><span class="velvet-newsletter__perk-icon" aria-hidden="true">🔄</span> Easy Returns</li>
+          <li class="velvet-newsletter__perk"><span class="velvet-newsletter__perk-icon" aria-hidden="true">📦</span> Cash on Delivery</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="velvet-footer">
+    <div class="velvet-footer__inner">
+      <div class="velvet-footer__grid">
+        <div class="velvet-footer__col velvet-footer__col--brand">
+          <a href="index.html" class="velvet-footer__logo" aria-label="Velvet — Home">VELVET</a>
+          <p class="velvet-footer__tagline">Wear the Difference</p>
+          <p class="velvet-footer__about">
+            A premium Pakistani clothing brand crafting handpicked lawns, formals, and casuals since 2018.
+          </p>
+
+          <ul class="velvet-footer__social" aria-label="Social links">
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h-2.5A4 4 0 0 0 8.5 7v2.5H6V13h2.5v8H12v-8h2.7L15 9.5h-3V7.5a1 1 0 0 1 1-1H15z"></path></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3 3 0 1 1-3-3"></path><path d="M14 3a4.5 4.5 0 0 0 4.5 4.5"></path></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M11 8c2 0 3.5 1.4 3.5 3.3 0 2.2-1.5 4-3.4 4-1 0-1.8-.6-1.8-1.4 0-.4.1-.8.3-1.7l.6-2.4"></path><path d="m10.5 13-1 5"></path></svg>
+              </a>
+            </li>
+          </ul>
+
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="velvet-footer__shop-insta">Shop on Instagram &rarr;</a>
+        </div>
+
+        <div class="velvet-footer__col">
+          <h3 class="velvet-footer__title">Shop</h3>
+          <ul class="velvet-footer__list">
+            <li><a href="shop.html" class="velvet-footer__link">New Arrivals</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Lawn Collection</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Formal Wear</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Casual Wear</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Sale</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="velvet-footer__col">
+          <h3 class="velvet-footer__title">Help</h3>
+          <ul class="velvet-footer__list">
+            <li><a href="contact.html" class="velvet-footer__link">Size Guide</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Shipping Info</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Returns &amp; Exchanges</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Track Your Order</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">FAQs</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="velvet-footer__col">
+          <h3 class="velvet-footer__title">Contact</h3>
+          <ul class="velvet-footer__list velvet-footer__list--contact">
+            <li><span class="velvet-footer__icon" aria-hidden="true">📍</span> Liberty Market, Lahore</li>
+            <li><span class="velvet-footer__icon" aria-hidden="true">📞</span> <a href="tel:+923170552359" class="velvet-footer__link">+92 317 0552359</a></li>
+            <li><span class="velvet-footer__icon" aria-hidden="true">✉️</span> <a href="mailto:hello@velvet.pk" class="velvet-footer__link">hello@velvet.pk</a></li>
+            <li><span class="velvet-footer__icon" aria-hidden="true">🕐</span> Mon–Sat: 10 AM – 8 PM</li>
+          </ul>
+          <a href="https://wa.me/923170552359" target="_blank" rel="noopener noreferrer" class="velvet-footer__whatsapp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A10.5 10.5 0 0 0 3.7 17.1L2 22l5-1.6a10.5 10.5 0 0 0 5 1.3 10.5 10.5 0 0 0 8.5-18.2zM12 20a8.5 8.5 0 0 1-4.3-1.2l-.3-.2-3 1 1-2.9-.2-.3A8.5 8.5 0 1 1 12 20zm4.8-6.4c-.3-.1-1.6-.8-1.8-.9-.3-.1-.4-.1-.6.1l-.8 1c-.2.2-.3.3-.6.1a7 7 0 0 1-2-1.3 7.7 7.7 0 0 1-1.5-1.8c-.1-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.4l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.8.3 3 3 0 0 0-1 2.3c0 1.3 1 2.6 1.1 2.8.2.2 2 3.2 5 4.5a17 17 0 0 0 1.7.6c.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.3z"></path></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+
+      <div class="velvet-footer__bottom">
+        <p class="velvet-footer__copy">© 2026 Velvet. All rights reserved. Crafted by Umer.</p>
+        <p class="velvet-footer__payments">
+          <span class="velvet-footer__payment">Visa</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">Mastercard</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">JazzCash</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">EasyPaisa</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">COD</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

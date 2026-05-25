@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About | Velvet</title>
+  <meta name="description" content="The story behind Velvet — handcrafted luxury Pakistani clothing made with intention." />
+
+  <link rel="canonical" href="https://velvet-demo.vercel.app/about.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About | Velvet" />
+  <meta property="og:description" content="The story behind Velvet — handcrafted luxury Pakistani clothing made with intention. Founded in Lahore, 2018." />
+  <meta property="og:url" content="https://velvet-demo.vercel.app/about.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About | Velvet" />
+  <meta name="twitter:description" content="The story behind Velvet — handcrafted luxury Pakistani clothing." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="velvet-header">
+    <div class="velvet-header__top">
+      <div class="velvet-header__left">
+        <button type="button" class="velvet-icon-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="20" y1="20" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+
+      <a href="index.html" class="velvet-logo" aria-label="Velvet — Home">VELVET</a>
+
+      <div class="velvet-header__right">
+        <button type="button" class="velvet-icon-btn" aria-label="Wishlist">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </button>
+        <button type="button" class="velvet-icon-btn" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="velvet-cart-badge" data-cart-count>0</span>
+        </button>
+        <button type="button" class="velvet-icon-btn velvet-hamburger" aria-label="Open menu" aria-expanded="false" data-menu-open>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="velvet-nav" aria-label="Primary">
+      <a href="shop.html" class="velvet-nav__link">New Arrivals</a>
+      <a href="shop.html" class="velvet-nav__link">Lawn</a>
+      <a href="shop.html" class="velvet-nav__link">Formals</a>
+      <a href="shop.html" class="velvet-nav__link">Casuals</a>
+      <a href="shop.html" class="velvet-nav__link velvet-nav__link--sale">Sale</a>
+      <a href="about.html" class="velvet-nav__link is-active">About</a>
+    </nav>
+
+    <div class="velvet-mobile-menu" data-mobile-menu aria-hidden="true">
+      <div class="velvet-mobile-menu__header">
+        <span class="velvet-logo">VELVET</span>
+        <button type="button" class="velvet-mobile-menu__close" aria-label="Close menu" data-menu-close>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+        </button>
+      </div>
+      <ul class="velvet-mobile-menu__list">
+        <li><a href="shop.html" class="velvet-mobile-menu__link">New Arrivals</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link">Lawn</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link">Formals</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link">Casuals</a></li>
+        <li><a href="shop.html" class="velvet-mobile-menu__link velvet-mobile-menu__link--sale">Sale</a></li>
+        <li><a href="about.html" class="velvet-mobile-menu__link is-active">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about-hero" class="velvet-about-hero">
+      <div class="velvet-about-hero__overlay"></div>
+      <div class="velvet-about-hero__content">
+        <h1 class="velvet-about-hero__heading">Our Story</h1>
+        <p class="velvet-about-hero__subtext">Born in Lahore. Made for the world.</p>
+      </div>
+    </section>
+
+    <section id="about-beginning" class="velvet-about-beginning">
+      <div class="velvet-about-beginning__inner">
+        <div class="velvet-about-beginning__text">
+          <span class="velvet-section__label">The Beginning</span>
+          <h2 class="velvet-about-beginning__heading">From a small studio to a movement</h2>
+          <p class="velvet-about-beginning__paragraph">
+            Velvet was founded in 2018 by Sara Ahmed in a small studio in Gulberg, Lahore. What started with just 10 carefully sketched designs has grown into a collection of over 200 silhouettes, serving customers across Pakistan and shipped to wardrobes around the world.
+          </p>
+          <p class="velvet-about-beginning__paragraph">
+            Every season, we return to that same studio — to the quiet hum of sewing machines, the smell of fresh fabric, and the belief that brought us here in the first place.
+          </p>
+          <blockquote class="velvet-about-beginning__quote">
+            <span class="velvet-about-beginning__quote-mark" aria-hidden="true">&ldquo;</span>
+            Our mission: make every Pakistani woman feel like royalty.
+          </blockquote>
+        </div>
+        <div class="velvet-about-beginning__image-wrap">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=900&q=80" alt="Velvet studio in Lahore" class="velvet-about-beginning__image" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about-values" class="velvet-about-values">
+      <div class="velvet-section__head">
+        <span class="velvet-section__label">What We Stand For</span>
+        <h2 class="velvet-section__heading">Our Values</h2>
+      </div>
+
+      <div class="velvet-about-values__grid">
+        <article class="velvet-value-card">
+          <span class="velvet-value-card__icon" aria-hidden="true">🧵</span>
+          <h3 class="velvet-value-card__title">Quality First</h3>
+          <p class="velvet-value-card__text">
+            We source only premium fabrics — handpicked lawns, pure chiffons, and finely woven cottons — and inspect every piece before it leaves our studio.
+          </p>
+        </article>
+
+        <article class="velvet-value-card">
+          <span class="velvet-value-card__icon" aria-hidden="true">🌿</span>
+          <h3 class="velvet-value-card__title">Sustainable</h3>
+          <p class="velvet-value-card__text">
+            From eco-friendly packaging to low-waste cutting, we work to reduce our footprint without compromising the craft.
+          </p>
+        </article>
+
+        <article class="velvet-value-card">
+          <span class="velvet-value-card__icon" aria-hidden="true">🤝</span>
+          <h3 class="velvet-value-card__title">Community</h3>
+          <p class="velvet-value-card__text">
+            We partner with local artisans across Punjab — weavers, dyers, embroiderers — paying fair wages and keeping generational craft alive.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about-numbers" class="velvet-about-numbers">
+      <div class="velvet-about-numbers__inner">
+        <div class="velvet-stat">
+          <span class="velvet-stat__value">200+</span>
+          <span class="velvet-stat__label">Designs</span>
+        </div>
+        <div class="velvet-stat">
+          <span class="velvet-stat__value">50,000+</span>
+          <span class="velvet-stat__label">Happy Customers</span>
+        </div>
+        <div class="velvet-stat">
+          <span class="velvet-stat__value">6+</span>
+          <span class="velvet-stat__label">Years</span>
+        </div>
+        <div class="velvet-stat">
+          <span class="velvet-stat__value">3</span>
+          <span class="velvet-stat__label">Store Locations</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-founder" class="velvet-about-founder">
+      <div class="velvet-section__head">
+        <span class="velvet-section__label">Meet the Founder</span>
+        <h2 class="velvet-section__heading">Sara Ahmed</h2>
+      </div>
+
+      <div class="velvet-founder">
+        <div class="velvet-founder__avatar" aria-hidden="true">
+          <span class="velvet-founder__initials">SA</span>
+        </div>
+        <p class="velvet-founder__role">Founder &amp; Creative Director</p>
+        <p class="velvet-founder__bio">
+          A graduate of the Pakistan Institute of Fashion &amp; Design, Sara spent her early years assisting Lahore&rsquo;s most respected ateliers before striking out on her own. She founded Velvet with one rule — design only what she&rsquo;d wear herself. Seven years on, that rule still guides every collection.
+        </p>
+        <a href="https://instagram.com/sara.velvet" target="_blank" rel="noopener noreferrer" class="velvet-founder__handle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg>
+          @sara.velvet
+        </a>
+      </div>
+    </section>
+
+    <section id="about-press" class="velvet-about-press">
+      <div class="velvet-about-press__inner">
+        <p class="velvet-about-press__label">As Seen In</p>
+        <ul class="velvet-about-press__list">
+          <li class="velvet-about-press__item">Dawn Images</li>
+          <li class="velvet-about-press__sep" aria-hidden="true">·</li>
+          <li class="velvet-about-press__item">Instep</li>
+          <li class="velvet-about-press__sep" aria-hidden="true">·</li>
+          <li class="velvet-about-press__item">Something Haute</li>
+          <li class="velvet-about-press__sep" aria-hidden="true">·</li>
+          <li class="velvet-about-press__item">The Express Tribune</li>
+          <li class="velvet-about-press__sep" aria-hidden="true">·</li>
+          <li class="velvet-about-press__item">Vogue Pakistan</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about-stores" class="velvet-about-stores">
+      <div class="velvet-section__head">
+        <span class="velvet-section__label">Visit Us</span>
+        <h2 class="velvet-section__heading">Our Stores</h2>
+      </div>
+
+      <div class="velvet-about-stores__grid">
+        <article class="velvet-store-card">
+          <h3 class="velvet-store-card__city">Lahore</h3>
+          <p class="velvet-store-card__name">Liberty Market</p>
+          <ul class="velvet-store-card__details">
+            <li><span class="velvet-store-card__icon" aria-hidden="true">📍</span> Shop 14, Main Boulevard, Liberty Market, Lahore</li>
+            <li><span class="velvet-store-card__icon" aria-hidden="true">🕐</span> Mon–Sat: 11 AM – 9 PM</li>
+            <li><span class="velvet-store-card__icon" aria-hidden="true">📞</span> +92 317 0552359</li>
+          </ul>
+          <a href="https://maps.google.com/?q=Liberty+Market+Lahore" target="_blank" rel="noopener noreferrer" class="velvet-store-card__map">Get Directions &rarr;</a>
+        </article>
+
+        <article class="velvet-store-card">
+          <h3 class="velvet-store-card__city">Islamabad</h3>
+          <p class="velvet-store-card__name">Centaurus Mall</p>
+          <ul class="velvet-store-card__details">
+            <li><span class="velvet-store-card__icon" aria-hidden="true">📍</span> Level 2, Centaurus Mall, F-8 Markaz, Islamabad</li>
+            <li><span class="velvet-store-card__icon" aria-hidden="true">🕐</span> Mon–Sun: 11 AM – 10 PM</li>
+            <li><span class="velvet-store-card__icon" aria-hidden="true">📞</span> +92 317 0552360</li>
+          </ul>
+          <a href="https://maps.google.com/?q=Centaurus+Mall+Islamabad" target="_blank" rel="noopener noreferrer" class="velvet-store-card__map">Get Directions &rarr;</a>
+        </article>
+
+        <article class="velvet-store-card">
+          <h3 class="velvet-store-card__city">Karachi</h3>
+          <p class="velvet-store-card__name">Lucky One Mall</p>
+          <ul class="velvet-store-card__details">
+            <li><span class="velvet-store-card__icon" aria-hidden="true">📍</span> Ground Floor, Lucky One Mall, Rashid Minhas Rd, Karachi</li>
+            <li><span class="velvet-store-card__icon" aria-hidden="true">🕐</span> Mon–Sun: 11 AM – 10 PM</li>
+            <li><span class="velvet-store-card__icon" aria-hidden="true">📞</span> +92 317 0552361</li>
+          </ul>
+          <a href="https://maps.google.com/?q=Lucky+One+Mall+Karachi" target="_blank" rel="noopener noreferrer" class="velvet-store-card__map">Get Directions &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about-cta" class="velvet-about-cta">
+      <div class="velvet-about-cta__inner">
+        <h2 class="velvet-about-cta__heading">Ready to Shop?</h2>
+        <p class="velvet-about-cta__text">Explore our new collection — handcrafted, hand-finished, made to last.</p>
+        <a href="shop.html" class="velvet-btn velvet-btn--gold">Shop the Collection</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="velvet-footer">
+    <div class="velvet-footer__inner">
+      <div class="velvet-footer__grid">
+        <div class="velvet-footer__col velvet-footer__col--brand">
+          <a href="index.html" class="velvet-footer__logo" aria-label="Velvet — Home">VELVET</a>
+          <p class="velvet-footer__tagline">Wear the Difference</p>
+          <p class="velvet-footer__about">
+            A premium Pakistani clothing brand crafting handpicked lawns, formals, and casuals since 2018.
+          </p>
+
+          <ul class="velvet-footer__social" aria-label="Social links">
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h-2.5A4 4 0 0 0 8.5 7v2.5H6V13h2.5v8H12v-8h2.7L15 9.5h-3V7.5a1 1 0 0 1 1-1H15z"></path></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3 3 0 1 1-3-3"></path><path d="M14 3a4.5 4.5 0 0 0 4.5 4.5"></path></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="velvet-footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M11 8c2 0 3.5 1.4 3.5 3.3 0 2.2-1.5 4-3.4 4-1 0-1.8-.6-1.8-1.4 0-.4.1-.8.3-1.7l.6-2.4"></path><path d="m10.5 13-1 5"></path></svg>
+              </a>
+            </li>
+          </ul>
+
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="velvet-footer__shop-insta">Shop on Instagram &rarr;</a>
+        </div>
+
+        <div class="velvet-footer__col">
+          <h3 class="velvet-footer__title">Shop</h3>
+          <ul class="velvet-footer__list">
+            <li><a href="shop.html" class="velvet-footer__link">New Arrivals</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Lawn Collection</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Formal Wear</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Casual Wear</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Sale</a></li>
+            <li><a href="shop.html" class="velvet-footer__link">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="velvet-footer__col">
+          <h3 class="velvet-footer__title">Help</h3>
+          <ul class="velvet-footer__list">
+            <li><a href="contact.html" class="velvet-footer__link">Size Guide</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Shipping Info</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Returns &amp; Exchanges</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Track Your Order</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">FAQs</a></li>
+            <li><a href="contact.html" class="velvet-footer__link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="velvet-footer__col">
+          <h3 class="velvet-footer__title">Contact</h3>
+          <ul class="velvet-footer__list velvet-footer__list--contact">
+            <li><span class="velvet-footer__icon" aria-hidden="true">📍</span> Liberty Market, Lahore</li>
+            <li><span class="velvet-footer__icon" aria-hidden="true">📞</span> <a href="tel:+923170552359" class="velvet-footer__link">+92 317 0552359</a></li>
+            <li><span class="velvet-footer__icon" aria-hidden="true">✉️</span> <a href="mailto:hello@velvet.pk" class="velvet-footer__link">hello@velvet.pk</a></li>
+            <li><span class="velvet-footer__icon" aria-hidden="true">🕐</span> Mon–Sat: 10 AM – 8 PM</li>
+          </ul>
+          <a href="https://wa.me/923170552359" target="_blank" rel="noopener noreferrer" class="velvet-footer__whatsapp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A10.5 10.5 0 0 0 3.7 17.1L2 22l5-1.6a10.5 10.5 0 0 0 5 1.3 10.5 10.5 0 0 0 8.5-18.2zM12 20a8.5 8.5 0 0 1-4.3-1.2l-.3-.2-3 1 1-2.9-.2-.3A8.5 8.5 0 1 1 12 20zm4.8-6.4c-.3-.1-1.6-.8-1.8-.9-.3-.1-.4-.1-.6.1l-.8 1c-.2.2-.3.3-.6.1a7 7 0 0 1-2-1.3 7.7 7.7 0 0 1-1.5-1.8c-.1-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.4l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.8.3 3 3 0 0 0-1 2.3c0 1.3 1 2.6 1.1 2.8.2.2 2 3.2 5 4.5a17 17 0 0 0 1.7.6c.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.3z"></path></svg>
+            Chat with us
+          </a>
+        </div>
+      </div>
+
+      <div class="velvet-footer__bottom">
+        <p class="velvet-footer__copy">© 2026 Velvet. All rights reserved. Crafted by Umer.</p>
+        <p class="velvet-footer__payments">
+          <span class="velvet-footer__payment">Visa</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">Mastercard</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">JazzCash</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">EasyPaisa</span>
+          <span class="velvet-footer__payment-sep">·</span>
+          <span class="velvet-footer__payment">COD</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
