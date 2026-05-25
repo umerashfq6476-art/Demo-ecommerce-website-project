@@ -2508,7 +2508,7 @@ body.menu-open {
 
 @media (min-width: 960px) {
   .velvet-pd__layout {
-    grid-template-columns: 55% 45%;
+    grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
     gap: 3.5rem;
     align-items: start;
   }

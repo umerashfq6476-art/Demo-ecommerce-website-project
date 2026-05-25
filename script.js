@@ -1,6 +1,51 @@
 // Velvet - Premium Pakistani Clothing Brand
 // JavaScript file
 
+const VELVET_SELECTED_KEY = 'velvet:selected-product';
+
+(function applySelectedProductToDetail() {
+  const pd = document.querySelector('[data-pd-product]');
+  if (!pd) return;
+
+  let item;
+  try { item = JSON.parse(sessionStorage.getItem(VELVET_SELECTED_KEY) || 'null'); } catch (e) { item = null; }
+  if (!item) return;
+
+  const fmtPKR = (n) => 'PKR ' + Math.round(Number(n) || 0).toLocaleString('en-US');
+
+  if (item.id) pd.dataset.productId = String(item.id);
+  if (item.name) pd.dataset.productName = item.name;
+  if (item.category) pd.dataset.productCategory = item.category;
+  if (item.price != null) pd.dataset.productPrice = fmtPKR(item.price);
+
+  const titleEl = document.querySelector('.velvet-pd-info__title');
+  if (titleEl && item.name) titleEl.textContent = item.name;
+
+  const labelEl = document.querySelector('.velvet-pd-info__label');
+  if (labelEl && item.category) labelEl.textContent = item.category.toUpperCase();
+
+  const priceEl = document.querySelector('.velvet-pd-info__price');
+  if (priceEl && item.price != null) priceEl.textContent = fmtPKR(item.price);
+
+  const origPriceEl = document.querySelector('.velvet-pd-info__price--original');
+  if (origPriceEl) origPriceEl.hidden = true;
+
+  const mainImg = document.querySelector('[data-pd-main-image]');
+  if (mainImg && item.image) {
+    mainImg.src = item.image;
+    if (item.name) mainImg.alt = item.name;
+  }
+
+  const firstThumb = document.querySelector('[data-pd-thumb]');
+  if (firstThumb && item.image) {
+    firstThumb.dataset.image = item.image;
+    const thumbImg = firstThumb.querySelector('img');
+    if (thumbImg) thumbImg.src = item.image;
+  }
+
+  if (item.name) document.title = item.name + ' | Velvet';
+})();
+
 (function initVelvetNavbar() {
   const openBtn = document.querySelector('[data-menu-open]');
   const closeBtn = document.querySelector('[data-menu-close]');
@@ -1131,6 +1176,17 @@ const VelvetStore = (function () {
     });
   });
 
+  // Save selected product to sessionStorage when navigating from a card to the detail page
+  document.querySelectorAll('.velvet-product-card').forEach((card) => {
+    card.querySelectorAll('a[href*="product-detail"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const product = VelvetStore.productFromCard(card);
+        if (!product) return;
+        try { sessionStorage.setItem(VELVET_SELECTED_KEY, JSON.stringify(product)); } catch (e) {}
+      });
+    });
+  });
+
   // Add to cart from product cards (index, shop)
   document.querySelectorAll('.velvet-addcart-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -1444,6 +1500,14 @@ const VelvetStore = (function () {
         document.body.classList.add('velvet-lock');
       }
     });
+
+    const detailsLink = content.querySelector('.velvet-quickview__details');
+    if (detailsLink) {
+      detailsLink.addEventListener('click', () => {
+        if (!currentProduct) return;
+        try { sessionStorage.setItem(VELVET_SELECTED_KEY, JSON.stringify(currentProduct)); } catch (e) {}
+      });
+    }
   };
 
   document.querySelectorAll('.velvet-quickview-btn').forEach((btn) => {
