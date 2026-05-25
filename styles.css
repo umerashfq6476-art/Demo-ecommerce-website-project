@@ -4684,3 +4684,640 @@ body.menu-open {
   text-transform: uppercase;
   color: var(--accent-gold);
 }
+
+/* ============================================
+   CART DRAWER + OVERLAY
+   ============================================ */
+
+body.velvet-lock {
+  overflow: hidden;
+}
+
+.velvet-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 10, 10, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.velvet-drawer-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.velvet-cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: 420px;
+  max-width: 100%;
+  background-color: #ffffff;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.velvet-cart-drawer.is-open {
+  transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+  .velvet-cart-drawer {
+    width: 100%;
+  }
+}
+
+.velvet-cart-drawer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.velvet-cart-drawer__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.velvet-cart-drawer__count {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 0.35rem;
+}
+
+.velvet-cart-drawer__close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.velvet-cart-drawer__close:hover {
+  color: var(--accent-gold);
+}
+
+.velvet-cart-drawer__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.velvet-cart-drawer__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.velvet-cart-drawer__foot {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 1.5rem 1.5rem;
+  flex-shrink: 0;
+  background-color: #ffffff;
+}
+
+.velvet-cart-drawer__subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.velvet-cart-drawer__note {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0.5rem 0 1rem;
+}
+
+.velvet-cart-drawer__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.velvet-cart-drawer__actions .velvet-btn {
+  padding: 0.85rem 1rem;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.velvet-cart-drawer__demo {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  text-align: center;
+}
+
+.velvet-btn--outline-dark {
+  background-color: transparent;
+  color: #000;
+  border-color: #000;
+}
+
+.velvet-btn--outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Cart items */
+.velvet-cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.velvet-cart-item:first-child {
+  padding-top: 0;
+}
+
+.velvet-cart-item:last-child {
+  border-bottom: none;
+}
+
+.velvet-cart-item__image-wrap {
+  width: 80px;
+  height: 100px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.velvet-cart-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.velvet-cart-item__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.velvet-cart-item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.velvet-cart-item__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.velvet-cart-item__remove {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.velvet-cart-item__remove:hover {
+  color: #c0392b;
+}
+
+.velvet-cart-item__remove svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.velvet-cart-item__size {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+  display: inline-block;
+}
+
+.velvet-cart-item__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.velvet-cart-item__qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+}
+
+.velvet-cart-item__qty button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.velvet-cart-item__qty button:hover {
+  background-color: var(--bg-secondary);
+}
+
+.velvet-cart-item__qty span {
+  min-width: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.velvet-cart-item__price {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Empty state */
+.velvet-cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-secondary);
+  height: 100%;
+}
+
+.velvet-cart-empty svg {
+  width: 3rem;
+  height: 3rem;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.velvet-cart-empty p {
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+
+.velvet-cart-empty__cta {
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   MODAL (wishlist + quickview + size guide)
+   ============================================ */
+
+.velvet-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 10, 10, 0.55);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.velvet-modal.is-open {
+  opacity: 1;
+}
+
+.velvet-modal[hidden] {
+  display: none;
+}
+
+.velvet-modal__card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.28s ease;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+.velvet-modal.is-open .velvet-modal__card {
+  transform: translateY(0);
+}
+
+.velvet-modal__card--wide {
+  max-width: 880px;
+}
+
+.velvet-modal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.velvet-modal__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.velvet-modal__close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  transition: color 0.2s ease;
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 2;
+}
+
+.velvet-modal__card .velvet-modal__head + .velvet-modal__body {
+  /* When there is a head bar, the close button inside it is the one shown */
+}
+
+.velvet-modal__head .velvet-modal__close {
+  position: static;
+}
+
+.velvet-modal__close:hover {
+  color: var(--accent-gold);
+}
+
+.velvet-modal__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.velvet-modal__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Wishlist items */
+.velvet-wishlist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-secondary);
+}
+
+.velvet-wishlist-empty svg {
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.velvet-wishlist-empty p {
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+
+.velvet-wishlist-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.velvet-wishlist-item:first-child { padding-top: 0; }
+.velvet-wishlist-item:last-child { border-bottom: none; }
+
+.velvet-wishlist-item__image-wrap {
+  width: 90px;
+  height: 110px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.velvet-wishlist-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.velvet-wishlist-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.velvet-wishlist-item__category {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.velvet-wishlist-item__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.velvet-wishlist-item__price {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.velvet-wishlist-item__actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.velvet-wishlist-item__actions .velvet-btn {
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem;
+}
+
+.velvet-wishlist-item__remove {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  padding: 0;
+}
+
+.velvet-wishlist-item__remove:hover {
+  color: #c0392b;
+}
+
+.velvet-cart-badge--wishlist {
+  background-color: #c0392b;
+}
+
+.velvet-cart-badge--wishlist.is-empty {
+  display: none;
+}
+
+/* Quick view */
+.velvet-quickview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .velvet-quickview {
+    grid-template-columns: 1fr;
+  }
+}
+
+.velvet-quickview__image-wrap {
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.velvet-quickview__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.velvet-quickview__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.velvet-quickview__category {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.velvet-quickview__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.velvet-quickview__price {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.velvet-quickview__desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.velvet-quickview__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.velvet-quickview__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.velvet-quickview__sizes {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.velvet-quickview__size {
+  min-width: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.velvet-quickview__size.is-selected {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.velvet-quickview__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.velvet-quickview__actions .velvet-btn {
+  flex: 1 1 auto;
+}
